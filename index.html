@@ -15,9 +15,18 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<nav class="topnav" aria-label="Secciones">
+  <div class="topnav-inner">
+    <a class="brand" href="index.html">Alisson Quijano</a>
+    <ul class="navlinks">
+      <li><a href="index.html" class="active" aria-current="page">Proyectos</a></li>
+      <li><a href="experiencia.html">Experiencia</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="wrap">
 
-  <header class="hero">
+  <header class="hero" id="inicio">
     <div class="where">
       <span>San Salvador, El Salvador</span>
     </div>
@@ -28,21 +37,29 @@
         <p class="role">Ingeniería de Software y Negocios Digitales · ESEN</p>
       </div>
     </div>
-    <p class="bio">Estudiante de tercer año con experiencia en desarrollo web, de escritorio y móvil, y en bases de datos relacionales. Me interesan la innovación digital, la ciberseguridad y la administración de bases de datos.</p>
+    <p class="bio">Estudiante de tercer año con experiencia práctica en desarrollo web, bases de datos y construcción de proyectos desde cero, en entornos frontend, backend y full-stack. Me destaco por aprender herramientas nuevas con rapidez, comprender requerimientos y convertirlos en soluciones estructuradas y funcionales que pruebo y mejoro de forma iterativa. Busco mi primera experiencia laboral, en una pasantía o un puesto junior, donde pueda aportar a proyectos de impacto y seguir creciendo técnicamente.</p>
     <nav class="links" aria-label="Enlaces">
       <a class="btn primary" href="https://github.com/sonali-218" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn" href="https://www.linkedin.com/in/alisson-quijano/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="#contacto">Contacto</a>
+      <a class="btn" href="mailto:alisson.quijano@gmail.com" id="email-personal">alisson.quijano@gmail.com ↗</a>
     </nav>
   </header>
 
   <section id="proyectos" aria-labelledby="h-proyectos">
-    <h2 id="h-proyectos">Proyectos en equipo</h2>
+    <h2 id="h-proyectos">Proyectos</h2>
+    <div class="tabs" role="tablist" aria-label="Tipo de proyecto">
+      <button class="tab" role="tab" id="tab-equipo" aria-controls="panel-equipo" aria-selected="true" type="button">En equipo <span class="count">5</span></button>
+      <button class="tab" role="tab" id="tab-personales" aria-controls="panel-personales" aria-selected="false" tabindex="-1" type="button">Personales <span class="count">3</span></button>
+    </div>
+    <div id="panel-equipo" role="tabpanel" aria-labelledby="tab-equipo">
     <div class="projects">
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Móvil</span>
           <h3>App de sesiones de estudio enfocado</h3>
+          </div>
           <span class="badge">En desarrollo</span>
         </div>
         <p>App móvil que convierte cada tarea en una sesión de concentración: defines tu objetivo, la duración y qué apps se silencian. Funciona sin conexión y sin cuenta. Ya está listo el formulario de sesiones con validación por campo. Equipo de cinco, 12 semanas.</p>
@@ -53,7 +70,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">API · Backend</span>
           <h3>DeliveryApp</h3>
+          </div>
           <span class="date">2026.06 — 2026.07</span>
         </div>
         <p>API REST para restaurantes con pedidos en mesa y a domicilio, inventario que se descuenta solo y cierre de caja. Acceso por roles con JWT.</p>
@@ -64,7 +84,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Web · Full-stack</span>
           <h3>CuponX</h3>
+          </div>
           <span class="date">2026.02 — 2026.04</span>
         </div>
         <p>Plataforma de cupones donde los clientes compran ofertas de empresas locales y las canjean con código QR. Incluye paneles para administradores y empresas.</p>
@@ -75,7 +98,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Web</span>
           <h3>TurismoX</h3>
+          </div>
           <span class="date">2025.08 — 2025.11</span>
         </div>
         <p>Sitio de turismo de El Salvador con destinos filtrables, rutas y tarifas por lugar, más un panel de administración con inicio de sesión.</p>
@@ -86,7 +112,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Escritorio</span>
           <h3>Sistema de gestión para clínica dental</h3>
+          </div>
           <span class="date">2025.02 — 2025.08</span>
         </div>
         <p>App de escritorio que digitaliza una clínica dental real: pacientes, doctores, citas, tratamientos y facturación. Arquitectura MVC.</p>
@@ -96,15 +125,16 @@
       </article>
 
     </div>
-  </section>
-
-  <section id="personales" aria-labelledby="h-personales">
-    <h2 id="h-personales">Proyectos personales</h2>
+    </div>
+    <div id="panel-personales" role="tabpanel" aria-labelledby="tab-personales" hidden>
     <div class="personal">
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Escritorio</span>
           <h3>Simulador de árbol binario de búsqueda</h3>
+          </div>
           <span class="date">2025.06 — 2025.07</span>
         </div>
         <p>App de escritorio para insertar, buscar y eliminar nodos, dibujar el árbol y ver sus recorridos. También calcula altura y suma, y guarda el árbol en un archivo.</p>
@@ -114,7 +144,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Consola</span>
           <h3>Sistema de gestión de biblioteca</h3>
+          </div>
           <span class="date">2025.04</span>
         </div>
         <p>Préstamo y devolución de libros y revistas a estudiantes, con búsqueda por autor o editor. Modelado con herencia y colecciones.</p>
@@ -124,7 +157,10 @@
 
       <article class="project">
         <div class="project-head">
+          <div class="title">
+          <span class="kind">Consola</span>
           <h3>Analizador de contraseñas</h3>
+          </div>
           <span class="date">2025.03</span>
         </div>
         <p>Evalúa la fortaleza de una contraseña según su longitud, mayúsculas, números y símbolos, y sugiere cómo mejorarla.</p>
@@ -133,63 +169,7 @@
       </article>
 
     </div>
-  </section>
-
-  <section id="experiencia" aria-labelledby="h-experiencia">
-    <h2 id="h-experiencia">Experiencia</h2>
-    <ol class="log">
-      <li>
-        <span class="date">2026.02 — 2026.05</span>
-        <div class="what">
-          <h3>Digital Identity &amp; Access Management Trainee</h3>
-          <span class="org">RSM US – El Salvador Trainee Program 2026</span>
-          <p>Entrenamiento intensivo en Gestión de Identidad y Acceso (IAM) y ciberseguridad en un entorno empresarial.</p>
-        </div>
-      </li>
-      <li>
-        <span class="date">2025.04 — 2026.01</span>
-        <div class="what">
-          <h3>Marketing Lead</h3>
-          <span class="org">C3 · Competitive Coding Club</span>
-          <p>Lideré al equipo de marketing y las campañas de la Copa Salvadoreña de Programación e ICPC 2025.</p>
-        </div>
-      </li>
-      <li>
-        <span class="date">2024.03 — hoy</span>
-        <div class="what">
-          <h3>Subdirectora de Logística y Patrocinios</h3>
-          <span class="org">Miembro desde 2024 · Subdirectora en 2025</span>
-          <p>Logística y relación con patrocinadores para conferencias académicas y eventos estudiantiles.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <section id="formacion" aria-labelledby="h-formacion">
-    <h2 id="h-formacion">Formación</h2>
-    <ol class="log">
-      <li>
-        <span class="date">2024.01 — hoy</span>
-        <div class="what">
-          <h3>Ingeniería de Software y Negocios Digitales</h3>
-          <span class="org">Escuela Superior de Economía y Negocios (ESEN)</span>
-        </div>
-      </li>
-      <li>
-        <span class="date">2026.08</span>
-        <div class="what">
-          <h3>Misión Académica Internacional</h3>
-          <span class="org">Universidad EAFIT · Medellín, Colombia</span>
-        </div>
-      </li>
-      <li>
-        <span class="date">2022.01 — 2023.11</span>
-        <div class="what">
-          <h3>Bachillerato General</h3>
-          <span class="org">Liceo Salvadoreño</span>
-        </div>
-      </li>
-    </ol>
+  </div>
   </section>
 
   <section id="habilidades" aria-labelledby="h-habilidades">
@@ -217,23 +197,6 @@
       <li><span class="date">2025</span><span>Cuadro de honor ESEN, 2025–2026</span></li>
       <li><span class="date">2022</span><span>Microsoft Office Specialist: Associate (Office 2019)</span></li>
     </ul>
-  </section>
-
-  <section id="contacto" class="contact" aria-labelledby="h-contacto">
-    <h2 id="h-contacto">Contacto</h2>
-    <p>Busco mi primera oportunidad como desarrolladora, en prácticas o a tiempo parcial. Escríbeme por correo o por LinkedIn.</p>
-    <div class="mails">
-      <div class="mail">
-        <span class="mail-label">Personal</span>
-        <a href="mailto:alisson.quijano@gmail.com"><code id="email-personal">alisson.quijano@gmail.com</code></a>
-        <button class="btn copy" type="button" data-target="email-personal">Copiar</button>
-      </div>
-      <div class="mail">
-        <span class="mail-label">Institucional</span>
-        <a href="mailto:20245233@esen.edu.sv"><code id="email-esen">20245233@esen.edu.sv</code></a>
-        <button class="btn copy" type="button" data-target="email-esen">Copiar</button>
-      </div>
-    </div>
   </section>
 
   <footer>© 2026 Alisson Denisse Quijano Guzmán</footer>

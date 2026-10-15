@@ -14,6 +14,8 @@
   --accent:#B4C2D4; --accent-soft:#24324A; --gold:#778DA9; color-scheme:dark;}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16.5px;line-height:1.6;
   padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));}
 .wrap{max-width:960px;margin:0 auto;padding-block:72px 56px;display:flex;flex-direction:column;gap:72px}
@@ -93,3 +95,38 @@ footer{font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px 
 @media (min-width:760px){.personal{grid-template-columns:repeat(3,1fr)}}
 .personal .project{padding:20px}
 .personal .project-head{flex-direction:column;align-items:flex-start;gap:4px}
+
+/* Menú fijo */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section,.hero{scroll-margin-top:80px}
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+  margin-left:calc(-1 * max(16px, env(safe-area-inset-left, 0px)));margin-right:calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.topnav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--fg)}
+.brand:hover{text-decoration:none}
+.navlinks{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{display:block;font-family:var(--mono);font-size:13px;color:var(--muted);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.navlinks a:hover{color:var(--fg);text-decoration:none}
+.navlinks a.active{color:var(--fg);background:var(--accent-soft)}
+
+.wrap{padding-block:48px 56px}
+
+/* Pestañas de proyectos */
+.tabs{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--surface);align-self:flex-start}
+.tab{font-family:var(--mono);font-size:13.5px;color:var(--muted);background:transparent;border:0;padding:8px 16px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tab:hover{color:var(--fg)}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--bg)}
+.tab .count{font-size:12px;opacity:.75}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Tipo de proyecto */
+.title{display:flex;flex-direction:column;gap:6px;min-width:0}
+.kind{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* Página de experiencia */
+.page-head{display:flex;flex-direction:column;gap:10px}
+.page-title{font-size:clamp(2rem,5vw,2.8rem)}
+.page-sub{color:var(--muted);margin:0}
