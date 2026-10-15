@@ -43,7 +43,7 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem, 7vw, 3.6re
 
 /* Secciones */
 section{display:flex;flex-direction:column;gap:24px}
-h2{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+h2{font-family:var(--mono);font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);
   margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
 h3{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-0.01em;margin:0;line-height:1.25}
 p{margin:0}
