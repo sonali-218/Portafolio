@@ -130,3 +130,7 @@ section,.hero{scroll-margin-top:80px}
 .page-head{display:flex;flex-direction:column;gap:10px}
 .page-title{font-size:clamp(2rem,5vw,2.8rem)}
 .page-sub{color:var(--muted);margin:0}
+
+/* Logo en la barra */
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand-logo{width:28px;height:28px;border-radius:7px;flex:none;box-shadow:0 0 0 1px var(--line)}
