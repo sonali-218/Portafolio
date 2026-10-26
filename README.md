@@ -5,10 +5,11 @@ Sitio personal estático (HTML y CSS, sin dependencias) con mis proyectos, exper
 ## Estructura
 
 ```
-index.html        proyectos, habilidades y reconocimientos
-experiencia.html  experiencia y formación
+index.html        todo el portafolio (proyectos, trayectoria, habilidades, reconocimientos)
+experiencia.html  redirige a index.html#trayectoria
 css/styles.css  estilos (paleta, tipografía, diseño responsive)
-js/main.js      pestañas de proyectos
+js/main.js      estante, idioma y navegación
+js/i18n.js      traducciones al inglés
 img/foto.jpg    foto de perfil
 ```
 

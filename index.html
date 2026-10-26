@@ -6,7 +6,7 @@
 <title>Alisson Quijano</title>
 <meta name="description" content="Portafolio de Alisson Quijano, estudiante de Ingeniería de Software y Negocios Digitales en ESEN.">
 <meta property="og:title" content="Alisson Quijano">
-<meta property="og:description" content="Proyectos, experiencia y contacto de Alisson Quijano.">
+<meta property="og:description" content="Proyectos, trayectoria y proceso de Alisson Quijano.">
 <meta property="og:image" content="img/foto.jpg">
 
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -19,13 +19,17 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav class="topnav" aria-label="Secciones">
+<nav class="topnav" aria-label="Secciones" data-i18n-aria="nav.aria">
   <div class="topnav-inner">
-    <a class="brand" href="index.html"><img class="brand-logo" src="img/favicon.svg" alt="" width="28" height="28">Alisson Quijano</a>
-    <ul class="navlinks">
-      <li><a href="index.html" class="active" aria-current="page">Proyectos</a></li>
-      <li><a href="experiencia.html">Experiencia</a></li>
-    </ul>
+    <a class="brand" href="#inicio"><img class="brand-logo" src="img/favicon.svg" alt="" width="28" height="28"><span class="brand-name">Alisson Quijano</span></a>
+    <div class="nav-right">
+      <ul class="navlinks">
+        <li><a href="#proyectos"><span class="num">I</span> <span data-i18n="nav.1">Proyectos</span></a></li>
+        <li><a href="#trayectoria"><span class="num">II</span> <span data-i18n="nav.2">Trayectoria</span></a></li>
+        <li><a href="#proceso"><span class="num">III</span> <span data-i18n="nav.3">Proceso</span></a></li>
+      </ul>
+      <button class="lang-toggle" type="button" aria-label="View in English" data-i18n-aria="ui.langaria"><span data-i18n="ui.lang">EN</span></button>
+    </div>
   </div>
 </nav>
 <div class="wrap">
@@ -35,14 +39,15 @@
       <span>San Salvador, El Salvador</span>
     </div>
     <div class="ident">
-      <img class="photo" src="img/foto.jpg" alt="Foto de Alisson Quijano" width="120" height="120">
+      <img class="photo" src="img/foto.jpg" alt="Foto de Alisson Quijano" data-i18n-alt="hero.alt" width="120" height="120">
       <div class="ident-text">
         <h1>Alisson Quijano</h1>
-        <p class="role">Ingeniería de Software y Negocios Digitales · ESEN</p>
+        <p class="role" data-i18n="hero.role">Ingeniería de Software y Negocios Digitales · ESEN</p>
+        <p class="langs-line" data-i18n="hero.langs">Español nativo · Inglés TOEFL iBT 98</p>
       </div>
     </div>
-    <p class="bio">Estudiante de tercer año con experiencia práctica en desarrollo web, bases de datos y construcción de proyectos desde cero, en entornos frontend, backend y full-stack. Me destaco por aprender herramientas nuevas con rapidez, comprender requerimientos y convertirlos en soluciones estructuradas y funcionales que pruebo y mejoro de forma iterativa. Busco mi primera experiencia laboral, en una pasantía o un puesto junior, donde pueda aportar a proyectos de impacto y seguir creciendo técnicamente.</p>
-    <nav class="links" aria-label="Enlaces">
+    <p class="bio" data-i18n="hero.bio">Estudiante de tercer año con experiencia práctica en desarrollo web, bases de datos y construcción de proyectos desde cero, en entornos frontend, backend y full-stack. Me destaco por aprender herramientas nuevas con rapidez, comprender requerimientos y convertirlos en soluciones estructuradas y funcionales que pruebo y mejoro de forma iterativa. Busco mi primera experiencia laboral, en una pasantía o un puesto junior, donde pueda aportar a proyectos de impacto y seguir creciendo técnicamente.</p>
+    <nav class="links" aria-label="Enlaces" data-i18n-aria="hero.linksaria">
       <a class="btn primary" href="https://github.com/sonali-218" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn" href="https://www.linkedin.com/in/alisson-quijano/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="mailto:alisson.quijano@gmail.com" id="email-personal">alisson.quijano@gmail.com ↗</a>
@@ -50,155 +55,251 @@
   </header>
 
   <section id="proyectos" aria-labelledby="h-proyectos">
-    <h2 id="h-proyectos">Proyectos</h2>
-    <div class="tabs" role="tablist" aria-label="Tipo de proyecto">
-      <button class="tab" role="tab" id="tab-equipo" aria-controls="panel-equipo" aria-selected="true" type="button">En equipo <span class="count">5</span></button>
-      <button class="tab" role="tab" id="tab-personales" aria-controls="panel-personales" aria-selected="false" tabindex="-1" type="button">Personales <span class="count">3</span></button>
+    <div class="sec-head">
+      <span class="chapter" data-i18n="sec.proj.chapter">Capítulo I</span>
+      <h2 id="h-proyectos" data-i18n="sec.proj.title">Proyectos</h2>
     </div>
-    <div id="panel-equipo" role="tabpanel" aria-labelledby="tab-equipo">
-    <div class="projects">
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Móvil</span>
-          <h3>App de sesiones de estudio enfocado</h3>
-          </div>
-          <span class="badge">En desarrollo</span>
+    <p class="shelf-hint" data-i18n="proj.hint">Elige un libro del estante para abrir su ficha.</p>
+    <div class="bookcase">
+      <div class="shelf-group" role="group" aria-label="En equipo" data-i18n-aria="shelf.team.aria">
+        <span class="shelf-label"><span data-i18n="shelf.team">En equipo</span> <span class="count">5</span></span>
+        <div class="shelf">
+        <button class="spine" type="button" data-tone="1" style="--w:60px;--h:212px" aria-controls="libro-enfoque" aria-pressed="true" data-vol="I"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.enfoque">Enfoque</span><span class="spine-vol" aria-hidden="true">I</span></button>
+        <button class="spine" type="button" data-tone="3" style="--w:54px;--h:196px" aria-controls="libro-delivery" aria-pressed="false" data-vol="II"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.delivery">DeliveryApp</span><span class="spine-vol" aria-hidden="true">II</span></button>
+        <button class="spine" type="button" data-tone="2" style="--w:64px;--h:222px" aria-controls="libro-cuponx" aria-pressed="false" data-vol="III"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.cuponx">CuponX</span><span class="spine-vol" aria-hidden="true">III</span></button>
+        <button class="spine" type="button" data-tone="4" style="--w:52px;--h:188px" aria-controls="libro-turismox" aria-pressed="false" data-vol="IV"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.turismox">TurismoX</span><span class="spine-vol" aria-hidden="true">IV</span></button>
+        <button class="spine" type="button" data-tone="5" style="--w:58px;--h:206px" aria-controls="libro-clinica" aria-pressed="false" data-vol="V"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.clinica">Clínica Dental</span><span class="spine-vol" aria-hidden="true">V</span></button>
         </div>
-        <p>App móvil que convierte cada tarea en una sesión de concentración: defines tu objetivo, la duración y qué apps se silencian. Funciona sin conexión y sin cuenta. Ya está listo el formulario de sesiones con validación por campo. Equipo de cinco, 12 semanas.</p>
-        <p><strong>Mi parte:</strong> agregué el soporte para iOS.</p>
-        <ul class="tags"><li>Flutter</li><li>Dart</li><li>Android</li><li>iOS</li></ul>
-        <div class="project-foot"><a href="https://github.com/Gaboum11/enfoque_app" target="_blank" rel="noopener">Ver repositorio ↗</a><span>Repositorio en equipo</span></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">API · Backend</span>
-          <h3>DeliveryApp</h3>
-          </div>
-          <span class="date">2026.06 — 2026.07</span>
+      </div>
+      <div class="shelf-group" role="group" aria-label="Personales" data-i18n-aria="shelf.own.aria">
+        <span class="shelf-label"><span data-i18n="shelf.own">Personales</span> <span class="count">3</span></span>
+        <div class="shelf">
+        <button class="spine" type="button" data-tone="3" style="--w:58px;--h:200px" aria-controls="libro-arbol" aria-pressed="false" data-vol="VI"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.arbol">Árbol binario</span><span class="spine-vol" aria-hidden="true">VI</span></button>
+        <button class="spine" type="button" data-tone="1" style="--w:54px;--h:214px" aria-controls="libro-biblioteca" aria-pressed="false" data-vol="VII"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.biblioteca">Biblioteca</span><span class="spine-vol" aria-hidden="true">VII</span></button>
+        <button class="spine" type="button" data-tone="4" style="--w:60px;--h:192px" aria-controls="libro-contrasenas" aria-pressed="false" data-vol="VIII"><span class="ribbon" aria-hidden="true"></span><span class="spine-title" data-i18n="spine.contrasenas">Contraseñas</span><span class="spine-vol" aria-hidden="true">VIII</span></button>
         </div>
-        <p>API REST para restaurantes con pedidos en mesa y a domicilio, inventario que se descuenta solo y cierre de caja. Acceso por roles con JWT.</p>
-        <p><strong>Mi parte:</strong> los módulos de menú y de recetas.</p>
-        <ul class="tags"><li>NestJS</li><li>TypeScript</li><li>PostgreSQL</li><li>TypeORM</li><li>JWT</li><li>Docker</li></ul>
-        <div class="project-foot"><a href="https://github.com/Desarrollo-de-apis-Chocolatina/DeliveryApp" target="_blank" rel="noopener">Ver repositorio ↗</a><span>Repositorio en equipo</span></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Web · Full-stack</span>
-          <h3>CuponX</h3>
-          </div>
-          <span class="date">2026.02 — 2026.04</span>
-        </div>
-        <p>Plataforma de cupones donde los clientes compran ofertas de empresas locales y las canjean con código QR. Incluye paneles para administradores y empresas.</p>
-        <p><strong>Mi parte:</strong> página principal, carrito, historial, restablecer contraseña y panel de administrador.</p>
-        <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>JWT</li><li>Bootstrap</li></ul>
-        <div class="project-foot"><a href="https://github.com/RivasMel2024/webII_proyecto" target="_blank" rel="noopener">Ver repositorio ↗</a><span>Repositorio en equipo</span></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Web</span>
-          <h3>TurismoX</h3>
-          </div>
-          <span class="date">2025.08 — 2025.11</span>
-        </div>
-        <p>Sitio de turismo de El Salvador con destinos filtrables, rutas y tarifas por lugar, más un panel de administración con inicio de sesión.</p>
-        <p><strong>Mi parte:</strong> la sección de tarifas conectada a Firestore y la barra de navegación.</p>
-        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Firebase Firestore</li><li>Firebase Auth</li><li>Bootstrap</li></ul>
-        <div class="project-foot"><a href="https://github.com/ChristianRende22/Turimox" target="_blank" rel="noopener">Ver repositorio ↗</a><span>Repositorio en equipo</span></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Escritorio</span>
-          <h3>Sistema de gestión para clínica dental</h3>
-          </div>
-          <span class="date">2025.02 — 2025.08</span>
-        </div>
-        <p>App de escritorio que digitaliza una clínica dental real: pacientes, doctores, citas, tratamientos y facturación. Arquitectura MVC.</p>
-        <p><strong>Mi parte:</strong> el módulo de tratamientos, de la vista a la base de datos.</p>
-        <ul class="tags"><li>Python</li><li>PyQt6</li><li>MySQL</li><li>MVC</li></ul>
-        <div class="project-foot"><a href="https://github.com/ChristianRende22/ClinicaDental" target="_blank" rel="noopener">Ver repositorio ↗</a><span>Repositorio en equipo</span></div>
-      </article>
-
+      </div>
     </div>
+    <div class="book-detail">
+      <article class="project book" id="libro-enfoque">
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="enfoque.kind">Móvil</span>
+            <h3 data-i18n="enfoque.title">App de sesiones de estudio enfocado</h3>
+          </div>
+          <span class="badge" data-i18n="enfoque.badge">En desarrollo</span>
+        </div>
+        <p data-i18n="enfoque.desc">App móvil que convierte cada tarea en una sesión de concentración: defines tu objetivo, la duración y qué apps se silencian. Funciona sin conexión y sin cuenta. Ya está listo el formulario de sesiones con validación por campo. Equipo de cinco, 12 semanas.</p>
+        <p><strong data-i18n="ui.mine">Mi parte:</strong> <span data-i18n="enfoque.mine">agregué el soporte para iOS.</span></p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">Dart</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">Flutter</span></dd></div><div><dt data-i18n="cat.plat">Plataformas</dt><dd><span class="chip">Android</span><span class="chip">iOS</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/Gaboum11/enfoque_app" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoteam">Repositorio en equipo</span></div>
+      </article>
+      <article class="project book" id="libro-delivery" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="delivery.kind">API · Backend</span>
+            <h3 data-i18n="delivery.title">DeliveryApp</h3>
+          </div>
+          <span class="date" data-i18n="delivery.date">2026.06 — 2026.07</span>
+        </div>
+        <p data-i18n="delivery.desc">API REST para restaurantes con pedidos en mesa y a domicilio, inventario que se descuenta solo y cierre de caja. Acceso por roles con JWT.</p>
+        <p><strong data-i18n="ui.mine">Mi parte:</strong> <span data-i18n="delivery.mine">los módulos de menú y de recetas.</span></p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">TypeScript</span><span class="chip">SQL</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">NestJS</span><span class="chip">TypeORM</span></dd></div><div><dt data-i18n="cat.data">Datos</dt><dd><span class="chip">PostgreSQL</span></dd></div><div><dt data-i18n="cat.tools">Herramientas</dt><dd><span class="chip">Docker</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip" data-i18n="delivery.chip.concepts.0">API REST</span><span class="chip">JWT</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/Desarrollo-de-apis-Chocolatina/DeliveryApp" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoteam">Repositorio en equipo</span></div>
+      </article>
+      <article class="project book" id="libro-cuponx" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="cuponx.kind">Web · Full-stack</span>
+            <h3 data-i18n="cuponx.title">CuponX</h3>
+          </div>
+          <span class="date" data-i18n="cuponx.date">2026.02 — 2026.04</span>
+        </div>
+        <p data-i18n="cuponx.desc">Plataforma de cupones donde los clientes compran ofertas de empresas locales y las canjean con código QR. Incluye paneles para administradores y empresas.</p>
+        <p><strong data-i18n="ui.mine">Mi parte:</strong> <span data-i18n="cuponx.mine">página principal, carrito, historial, restablecer contraseña y panel de administrador.</span></p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">JavaScript</span><span class="chip">SQL</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Bootstrap</span></dd></div><div><dt data-i18n="cat.data">Datos</dt><dd><span class="chip">PostgreSQL</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip">JWT</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/RivasMel2024/webII_proyecto" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoteam">Repositorio en equipo</span></div>
+      </article>
+      <article class="project book" id="libro-turismox" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="turismox.kind">Web</span>
+            <h3 data-i18n="turismox.title">TurismoX</h3>
+          </div>
+          <span class="date" data-i18n="turismox.date">2025.08 — 2025.11</span>
+        </div>
+        <p data-i18n="turismox.desc">Sitio de turismo de El Salvador con destinos filtrables, rutas y tarifas por lugar, más un panel de administración con inicio de sesión.</p>
+        <p><strong data-i18n="ui.mine">Mi parte:</strong> <span data-i18n="turismox.mine">la sección de tarifas conectada a Firestore y la barra de navegación.</span></p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">Bootstrap</span></dd></div><div><dt data-i18n="cat.data">Datos</dt><dd><span class="chip">Firebase Firestore</span></dd></div><div><dt data-i18n="cat.tools">Herramientas</dt><dd><span class="chip">Firebase Auth</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/ChristianRende22/Turimox" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoteam">Repositorio en equipo</span></div>
+      </article>
+      <article class="project book" id="libro-clinica" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="clinica.kind">Escritorio</span>
+            <h3 data-i18n="clinica.title">Sistema de gestión para clínica dental</h3>
+          </div>
+          <span class="date" data-i18n="clinica.date">2025.02 — 2025.08</span>
+        </div>
+        <p data-i18n="clinica.desc">App de escritorio que digitaliza una clínica dental real: pacientes, doctores, citas, tratamientos y facturación. Arquitectura MVC.</p>
+        <p><strong data-i18n="ui.mine">Mi parte:</strong> <span data-i18n="clinica.mine">el módulo de tratamientos, de la vista a la base de datos.</span></p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">Python</span><span class="chip">SQL</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">PyQt6</span></dd></div><div><dt data-i18n="cat.data">Datos</dt><dd><span class="chip">MySQL</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip">MVC</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/ChristianRende22/ClinicaDental" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoteam">Repositorio en equipo</span></div>
+      </article>
+      <article class="project book" id="libro-arbol" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="arbol.kind">Escritorio</span>
+            <h3 data-i18n="arbol.title">Simulador de árbol binario de búsqueda</h3>
+          </div>
+          <span class="date" data-i18n="arbol.date">2025.06 — 2025.07</span>
+        </div>
+        <p data-i18n="arbol.desc">App de escritorio para insertar, buscar y eliminar nodos, dibujar el árbol y ver sus recorridos. También calcula altura y suma, y guarda el árbol en un archivo.</p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">C#</span></dd></div><div><dt data-i18n="cat.fw">Frameworks</dt><dd><span class="chip">Windows Forms</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip" data-i18n="arbol.chip.concepts.0">Estructuras de datos</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/sonali-218/Guias-EDA" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoown">Proyecto personal</span></div>
+      </article>
+      <article class="project book" id="libro-biblioteca" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="biblioteca.kind">Consola</span>
+            <h3 data-i18n="biblioteca.title">Sistema de gestión de biblioteca</h3>
+          </div>
+          <span class="date" data-i18n="biblioteca.date">2025.04</span>
+        </div>
+        <p data-i18n="biblioteca.desc">Préstamo y devolución de libros y revistas a estudiantes, con búsqueda por autor o editor. Modelado con herencia y colecciones.</p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">Java</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip" data-i18n="biblioteca.chip.concepts.0">POO</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/sonali-218/Gesti-n-de-Biblioteca" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoown">Proyecto personal</span></div>
+      </article>
+      <article class="project book" id="libro-contrasenas" hidden>
+        <div class="project-head">
+          <div class="title">
+            <span class="kind" data-i18n="contrasenas.kind">Consola</span>
+            <h3 data-i18n="contrasenas.title">Analizador de contraseñas</h3>
+          </div>
+          <span class="date" data-i18n="contrasenas.date">2025.03</span>
+        </div>
+        <p data-i18n="contrasenas.desc">Evalúa la fortaleza de una contraseña según su longitud, mayúsculas, números y símbolos, y sugiere cómo mejorarla.</p>
+        <div class="skills-used"><span class="skills-title" data-i18n="ui.skills">Habilidades aplicadas</span><dl><div><dt data-i18n="cat.lang">Lenguajes</dt><dd><span class="chip">Java</span></dd></div><div><dt data-i18n="cat.concepts">Conceptos</dt><dd><span class="chip" data-i18n="contrasenas.chip.concepts.0">Seguridad</span></dd></div></dl></div>
+        <div class="project-foot"><a class="btn repo-link" href="https://github.com/sonali-218/PasswordAnalizer.java" target="_blank" rel="noopener" data-i18n="ui.repo">Ver repositorio ↗</a><span class="repo-note" data-i18n="ui.repoown">Proyecto personal</span></div>
+      </article>
     </div>
-    <div id="panel-personales" role="tabpanel" aria-labelledby="tab-personales" hidden>
-    <div class="personal">
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Escritorio</span>
-          <h3>Simulador de árbol binario de búsqueda</h3>
-          </div>
-          <span class="date">2025.06 — 2025.07</span>
-        </div>
-        <p>App de escritorio para insertar, buscar y eliminar nodos, dibujar el árbol y ver sus recorridos. También calcula altura y suma, y guarda el árbol en un archivo.</p>
-        <ul class="tags"><li>C#</li><li>Windows Forms</li><li>Estructuras de datos</li></ul>
-        <div class="project-foot"><a href="https://github.com/sonali-218/Guias-EDA" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Consola</span>
-          <h3>Sistema de gestión de biblioteca</h3>
-          </div>
-          <span class="date">2025.04</span>
-        </div>
-        <p>Préstamo y devolución de libros y revistas a estudiantes, con búsqueda por autor o editor. Modelado con herencia y colecciones.</p>
-        <ul class="tags"><li>Java</li><li>POO</li></ul>
-        <div class="project-foot"><a href="https://github.com/sonali-218/Gesti-n-de-Biblioteca" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <div class="title">
-          <span class="kind">Consola</span>
-          <h3>Analizador de contraseñas</h3>
-          </div>
-          <span class="date">2025.03</span>
-        </div>
-        <p>Evalúa la fortaleza de una contraseña según su longitud, mayúsculas, números y símbolos, y sugiere cómo mejorarla.</p>
-        <ul class="tags"><li>Java</li><li>Seguridad</li></ul>
-        <div class="project-foot"><a href="https://github.com/sonali-218/PasswordAnalizer.java" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-      </article>
-
-    </div>
-  </div>
   </section>
 
-  <section id="habilidades" aria-labelledby="h-habilidades">
-    <h2 id="h-habilidades">Habilidades</h2>
-    <div class="cols">
-      <div class="group">
-        <h4>Lenguajes</h4>
-        <ul class="tags"><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Java</li><li>C#</li><li>Dart</li><li>SQL</li><li>HTML/CSS</li></ul>
+  <section id="trayectoria" aria-labelledby="h-trayectoria">
+    <div class="sec-head">
+      <span class="chapter" data-i18n="sec.path.chapter">Capítulo II</span>
+      <h2 id="h-trayectoria" data-i18n="sec.path.title">Trayectoria</h2>
+    </div>
+    <div class="open-book">
+      <div class="page page-left">
+        <p class="running-head" data-i18n="xp.head">Experiencia</p>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="xp.0.date">2025.04 — hoy</span>
+          <h3 data-i18n="xp.0.title">Marketing Lead</h3>
+          <span class="org" data-i18n="xp.0.org">C3 · Competitive Coding Club · Junta Directiva</span>
+          <p data-i18n="xp.0.desc">Lideré al equipo de marketing y las campañas de la Copa Salvadoreña de Programación e ICPC 2025.</p>
+        </article>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="xp.1.date">2024.03 — hoy</span>
+          <h3 data-i18n="xp.1.title">Subdirectora de Logística y Patrocinios</h3>
+          <span class="org" data-i18n="xp.1.org">Miembro desde 2024 · Subdirectora en 2025</span>
+          <p data-i18n="xp.1.desc">Logística y relación con patrocinadores para conferencias académicas y eventos estudiantiles.</p>
+        </article>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="xp.2.date">2026.02 — 2026.05</span>
+          <h3 data-i18n="xp.2.title">Digital Identity &amp; Access Management Trainee</h3>
+          <span class="org" data-i18n="xp.2.org">RSM US – El Salvador Trainee Program 2026</span>
+          <p data-i18n="xp.2.desc">Entrenamiento intensivo en Gestión de Identidad y Acceso (IAM) y ciberseguridad en un entorno empresarial.</p>
+        </article>
+        <span class="folio" aria-hidden="true">— 1 —</span>
       </div>
-      <div class="group">
-        <h4>Herramientas</h4>
-        <ul class="tags"><li>React</li><li>Node.js</li><li>NestJS</li><li>Flutter</li><li>PyQt6</li><li>PostgreSQL</li><li>MySQL</li><li>Firebase</li><li>Docker</li><li>Git</li><li>Linux</li></ul>
-      </div>
-      <div class="group">
-        <h4>Idiomas</h4>
-        <ul class="tags"><li>Español nativo</li><li>Inglés · TOEFL iBT 98</li></ul>
+      <div class="page page-right">
+        <p class="running-head" data-i18n="ed.head">Formación</p>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="ed.0.date">2024.01 — hoy</span>
+          <h3 data-i18n="ed.0.title">Ingeniería de Software y Negocios Digitales</h3>
+          <span class="org" data-i18n="ed.0.org">Escuela Superior de Economía y Negocios (ESEN)</span>
+          <p data-i18n="ed.0.desc">Tercer año. Cuadro de honor 2025–2026.</p>
+        </article>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="ed.1.date">2026.08</span>
+          <h3 data-i18n="ed.1.title">Misión Académica Internacional</h3>
+          <span class="org" data-i18n="ed.1.org">Universidad EAFIT · Medellín, Colombia</span>
+          <p data-i18n="ed.1.desc">Programa de Emprendimiento e Innovación.</p>
+        </article>
+        <article class="leaf-entry">
+          <span class="date" data-i18n="ed.2.date">2022.01 — 2023.11</span>
+          <h3 data-i18n="ed.2.title">Bachillerato General</h3>
+          <span class="org" data-i18n="ed.2.org">Liceo Salvadoreño</span>
+        </article>
+        <span class="folio" aria-hidden="true">— 2 —</span>
       </div>
     </div>
+  </section>
+
+  <section id="proceso" aria-labelledby="h-proceso">
+    <div class="sec-head">
+      <span class="chapter" data-i18n="sec.proc.chapter">Capítulo III</span>
+      <h2 id="h-proceso" data-i18n="sec.proc.title">Proceso</h2>
+    </div>
+    <p class="shelf-hint" data-i18n="proc.intro">Así resuelvo problemas: con mirada de ingeniería, diseño y negocio, y siempre en equipo. Cada nota al margen lleva al proyecto donde lo apliqué.</p>
+    <ol class="method">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <div class="step-body">
+          <h3 data-i18n="step.1.title">Descubrir</h3>
+          <p data-i18n="step.1.body">Antes de escribir código entiendo el problema desde el negocio y desde el usuario: qué proceso reemplaza, quién lo usa y qué significa que funcione.</p>
+          <p class="team"><span class="team-label" data-i18n="ui.team">En equipo</span> <span data-i18n="step.1.team">Definimos juntos el alcance y lo que queda fuera de él.</span></p>
+        </div>
+        <aside class="margin-note">
+          <button class="note-link" type="button" data-book="clinica"><span class="note-vol" data-i18n="step.1.vol">Vol. V · Clínica dental</span><span class="note-text" data-i18n="step.1.note">La clínica gestionaba pacientes, citas y facturación en papel; el objetivo fue centralizarlo en un solo sistema.</span><span class="note-go" data-i18n="ui.notego">Abrir en el estante ↑</span></button>
+        </aside>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <div class="step-body">
+          <h3 data-i18n="step.2.title">Diseñar</h3>
+          <p data-i18n="step.2.body">Convierto los requerimientos en estructura: flujos, pantallas y una arquitectura clara, cuidando que la experiencia sea simple para quien la usa.</p>
+          <p class="team"><span class="team-label" data-i18n="ui.team">En equipo</span> <span data-i18n="step.2.team">Escribimos la especificación de cada módulo antes de programar.</span></p>
+        </div>
+        <aside class="margin-note">
+          <button class="note-link" type="button" data-book="delivery"><span class="note-vol" data-i18n="step.2.vol">Vol. II · DeliveryApp</span><span class="note-text" data-i18n="step.2.note">El sistema se dividió en módulos (menú, recetas, inventario, pedidos y caja) con roles y permisos definidos.</span><span class="note-go" data-i18n="ui.notego">Abrir en el estante ↑</span></button>
+        </aside>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <div class="step-body">
+          <h3 data-i18n="step.3.title">Desarrollar</h3>
+          <p data-i18n="step.3.body">Construyo por módulos, con responsabilidades claras, código ordenado e integración frecuente.</p>
+          <p class="team"><span class="team-label" data-i18n="ui.team">En equipo</span> <span data-i18n="step.3.team">Cada quien su módulo, ramas en Git y pull requests para integrar.</span></p>
+        </div>
+        <aside class="margin-note">
+          <button class="note-link" type="button" data-book="cuponx"><span class="note-vol" data-i18n="step.3.vol">Vol. III · CuponX</span><span class="note-text" data-i18n="step.3.note">Desarrollé la página principal, el carrito, el historial y el panel de administrador, conectados a la API.</span><span class="note-go" data-i18n="ui.notego">Abrir en el estante ↑</span></button>
+        </aside>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <div class="step-body">
+          <h3 data-i18n="step.4.title">Probar y refinar</h3>
+          <p data-i18n="step.4.body">Valido con casos de prueba, recibo retroalimentación y ajusto en ciclos cortos hasta que la solución cumple su objetivo.</p>
+          <p class="team"><span class="team-label" data-i18n="ui.team">En equipo</span> <span data-i18n="step.4.team">Revisamos juntos y repartimos las correcciones.</span></p>
+        </div>
+        <aside class="margin-note">
+          <button class="note-link" type="button" data-book="enfoque"><span class="note-vol" data-i18n="step.4.vol">Vol. I · App de enfoque</span><span class="note-text" data-i18n="step.4.note">Reglas por campo: duración entre 5 y 180 minutos y un objetivo de al menos 10 caracteres, con casos de prueba para cada una.</span><span class="note-go" data-i18n="ui.notego">Abrir en el estante ↑</span></button>
+        </aside>
+      </li>
+    </ol>
   </section>
 
   <section id="reconocimientos" aria-labelledby="h-reconocimientos">
-    <h2 id="h-reconocimientos">Reconocimientos</h2>
+    <div class="sec-head">
+      <span class="chapter" data-i18n="sec.awards.chapter">Apéndice</span>
+      <h2 id="h-reconocimientos" data-i18n="sec.awards.title">Reconocimientos</h2>
+    </div>
     <ul class="awards">
-      <li><span class="date">2025</span><span>Reconociendo tu Pasión · Mención en Proyecto Destacable</span></li>
-      <li><span class="date">2025</span><span>Cuadro de honor ESEN, 2025–2026</span></li>
+      <li><span class="date">2026</span><span data-i18n="aw.0">Reconociendo tu Pasión · Mención en Proyecto Destacable y Junta Directiva de C3</span></li>
+      <li><span class="date">2025</span><span data-i18n="aw.1">Reconociendo tu Pasión · Mención en Proyecto Destacable</span></li>
+      <li><span class="date">2025</span><span data-i18n="aw.2">Cuadro de honor ESEN, 2025–2026</span></li>
       <li><span class="date">2022</span><span>Microsoft Office Specialist: Associate (Office 2019)</span></li>
     </ul>
   </section>
@@ -206,6 +307,7 @@
   <footer>© 2026 Alisson Denisse Quijano Guzmán</footer>
 </div>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
